@@ -3505,7 +3505,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   display: inline-block;
   font-size: 35px;
   font-weight: 700;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Cairo', sans-serif !important;
   text-transform: uppercase;
   vertical-align: middle;
   padding-left: 10px;
@@ -3727,7 +3727,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   right: 0;
   top: 50%;
   content: "";
-  font-family: "Line Awesome Free";
+  font-family: 'Cairo', sans-serif !important;
   font-weight: 900;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -4984,7 +4984,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   left: 2px;
   top: 0px;
   content: "";
-  font-family: "Line Awesome Free";
+  font-family: 'Cairo', sans-serif !important;
   font-weight: 900;
   color: #666666;
   line-height: 20px;

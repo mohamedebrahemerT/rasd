@@ -1,0 +1,500 @@
+[2022-05-20 21:54:49] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'u939890021_rasd'@'localhost' (using password: YES) (SQL: select * from `languages`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'u939890021_rasd'@'localhost' (using password: YES) (SQL: select * from `languages`) at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(568): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Providers\\AppServiceProvider.php(28): Illuminate\\Database\\Eloquent\\Model::all()
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(914): Illuminate\\Container\\Container->call(Array)
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(895): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#17 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 31)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(896): array_walk(Array, Object(Closure))
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#24 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#25 {main}
+
+[previous exception] [object] (PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'u939890021_rasd'@'localhost' (using password: YES) at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=loca...', 'u939890021_rasd', ']32yDO:DxA', Array)
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'u939890021_rasd', ']32yDO:DxA', Array)
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1021): call_user_func(Object(Closure))
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1057): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(433): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#17 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(568): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Providers\\AppServiceProvider.php(28): Illuminate\\Database\\Eloquent\\Model::all()
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#24 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#25 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(914): Illuminate\\Container\\Container->call(Array)
+#26 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(895): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#27 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 31)
+#28 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(896): array_walk(Array, Object(Closure))
+#29 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#30 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#31 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#32 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#33 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#34 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#35 {main}
+"} 
+[2022-05-20 21:54:49] production.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'u939890021_rasd'@'localhost' (using password: YES) (SQL: select * from `languages` where `default` = 1 limit 1) (View: C:\xampp\htdocs\dashboard\rasd\@core\resources\views\errors\500.blade.php) {"view":{"view":"C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[HY000] [1045] Access denied for user 'u939890021_rasd'@'localhost' (using password: YES) (SQL: select * from `languages` where `default` = 1 limit 1) (View: C:\\xampp\\htdocs\\dashboard\asd\\@core\esources\\views\\errors\\500.blade.php) at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\LanguageHelper.php(70): Illuminate\\Database\\Eloquent\\Builder->first()
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\helpers.php(378): App\\Helpers\\LanguageHelper::user_lang_slug()
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\esources\\views/errors/500.blade.php(9): get_user_lang()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('C:\\\\xampp\\\\htdocs...')
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php(37): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#17 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(55): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 500, Array)
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(85): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 500, Array)
+#24 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(585): Illuminate\\Routing\\ResponseFactory->view('errors::500', Array, 500, Array)
+#25 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(490): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#26 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(356): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#27 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Exceptions\\Handler.php(61): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#28 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(427): App\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#29 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(115): Illuminate\\Foundation\\Http\\Kernel->renderException(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#30 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#31 {main}
+
+[previous exception] [object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'u939890021_rasd'@'localhost' (using password: YES) (SQL: select * from `languages` where `default` = 1 limit 1) at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\LanguageHelper.php(70): Illuminate\\Database\\Eloquent\\Builder->first()
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\helpers.php(378): App\\Helpers\\LanguageHelper::user_lang_slug()
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\storage\\framework\\views\\e92467aaaf15666fa2ab3cf12937da507bfd38ea.php(8): get_user_lang()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('C:\\\\xampp\\\\htdocs...')
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php(37): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#17 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(55): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 500, Array)
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(85): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 500, Array)
+#24 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(585): Illuminate\\Routing\\ResponseFactory->view('errors::500', Array, 500, Array)
+#25 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(490): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#26 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(356): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#27 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Exceptions\\Handler.php(61): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#28 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(427): App\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#29 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(115): Illuminate\\Foundation\\Http\\Kernel->renderException(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#30 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#31 {main}
+
+[previous exception] [object] (PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'u939890021_rasd'@'localhost' (using password: YES) at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=loca...', 'u939890021_rasd', ']32yDO:DxA', Array)
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'u939890021_rasd', ']32yDO:DxA', Array)
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1021): call_user_func(Object(Closure))
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1057): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(433): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#17 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\LanguageHelper.php(70): Illuminate\\Database\\Eloquent\\Builder->first()
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\helpers.php(378): App\\Helpers\\LanguageHelper::user_lang_slug()
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\storage\\framework\\views\\e92467aaaf15666fa2ab3cf12937da507bfd38ea.php(8): get_user_lang()
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('C:\\\\xampp\\\\htdocs...')
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#24 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#25 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#26 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php(37): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#27 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#28 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#29 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#30 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#31 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#32 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(55): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 500, Array)
+#33 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(85): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 500, Array)
+#34 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(585): Illuminate\\Routing\\ResponseFactory->view('errors::500', Array, 500, Array)
+#35 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(490): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#36 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(356): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#37 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Exceptions\\Handler.php(61): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#38 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(427): App\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#39 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(115): Illuminate\\Foundation\\Http\\Kernel->renderException(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#40 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#41 {main}
+"} 
+[2022-05-20 21:54:49] production.ERROR: Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'u939890021_rasd'@'localhost' (using password: YES) in C:\xampp\htdocs\dashboard\rasd\@core\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:70
+Stack trace:
+#0 C:\xampp\htdocs\dashboard\rasd\@core\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(70): PDO->__construct('mysql:host=loca...', 'u939890021_rasd', ']32yDO:DxA', Array)
+#1 C:\xampp\htdocs\dashboard\rasd\@core\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'u939890021_rasd', ']32yDO:DxA', Array)
+#2 C:\xampp\htdocs\dashboard\rasd\@core\vendor\laravel\framework\src\Illuminate\Database\Connectors\MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 C:\xampp\htdocs\dashboard\rasd\@core\vendor\laravel\framework\src\Illuminate\Database\Connectors\ConnectionFac {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'u939890021_rasd'@'localhost' (using password: YES) in C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70
+Stack trace:
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=loca...', 'u939890021_rasd', ']32yDO:DxA', Array)
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=loca...', 'u939890021_rasd', ']32yDO:DxA', Array)
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFac at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 {main}
+"} 
+[2022-05-20 21:57:45] production.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist (SQL: select * from `languages`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist (SQL: select * from `languages`) at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(568): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Providers\\AppServiceProvider.php(28): Illuminate\\Database\\Eloquent\\Model::all()
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(914): Illuminate\\Container\\Container->call(Array)
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(895): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#17 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 31)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(896): array_walk(Array, Object(Closure))
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#24 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#25 {main}
+
+[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:359)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): PDO->prepare('select * from `...')
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(568): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Providers\\AppServiceProvider.php(28): Illuminate\\Database\\Eloquent\\Model::all()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#17 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(914): Illuminate\\Container\\Container->call(Array)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(895): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#19 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 31)
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(896): array_walk(Array, Object(Closure))
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#24 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#25 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#26 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#27 {main}
+"} 
+[2022-05-20 21:57:45] production.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist (SQL: select * from `languages` where `default` = 1 limit 1) (View: C:\xampp\htdocs\dashboard\rasd\@core\resources\views\errors\500.blade.php) {"view":{"view":"C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php","data":[]},"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist (SQL: select * from `languages` where `default` = 1 limit 1) (View: C:\\xampp\\htdocs\\dashboard\asd\\@core\esources\\views\\errors\\500.blade.php) at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\LanguageHelper.php(70): Illuminate\\Database\\Eloquent\\Builder->first()
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\helpers.php(378): App\\Helpers\\LanguageHelper::user_lang_slug()
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\esources\\views/errors/500.blade.php(9): get_user_lang()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('C:\\\\xampp\\\\htdocs...')
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php(37): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#17 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(55): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 500, Array)
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(85): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 500, Array)
+#24 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(585): Illuminate\\Routing\\ResponseFactory->view('errors::500', Array, 500, Array)
+#25 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(490): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#26 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(356): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#27 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Exceptions\\Handler.php(61): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#28 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(427): App\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#29 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(115): Illuminate\\Foundation\\Http\\Kernel->renderException(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#30 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#31 {main}
+
+[previous exception] [object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist (SQL: select * from `languages` where `default` = 1 limit 1) at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\LanguageHelper.php(70): Illuminate\\Database\\Eloquent\\Builder->first()
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\helpers.php(378): App\\Helpers\\LanguageHelper::user_lang_slug()
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\storage\\framework\\views\\e92467aaaf15666fa2ab3cf12937da507bfd38ea.php(8): get_user_lang()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('C:\\\\xampp\\\\htdocs...')
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php(37): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#17 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(55): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 500, Array)
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(85): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 500, Array)
+#24 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(585): Illuminate\\Routing\\ResponseFactory->view('errors::500', Array, 500, Array)
+#25 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(490): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#26 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(356): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#27 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Exceptions\\Handler.php(61): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#28 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(427): App\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#29 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(115): Illuminate\\Foundation\\Http\\Kernel->renderException(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#30 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#31 {main}
+
+[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:359)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): PDO->prepare('select * from `...')
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Concerns\\BuildsQueries.php(259): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\LanguageHelper.php(70): Illuminate\\Database\\Eloquent\\Builder->first()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Helpers\\helpers.php(378): App\\Helpers\\LanguageHelper::user_lang_slug()
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\storage\\framework\\views\\e92467aaaf15666fa2ab3cf12937da507bfd38ea.php(8): get_user_lang()
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('C:\\\\xampp\\\\htdocs...')
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\xampp\\\\htdocs...', Array)
+#17 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\xampp\\\\htdocs...', Array)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php(37): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('C:\\\\xampp\\\\htdocs...', Array)
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#24 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(55): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 500, Array)
+#25 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResponseFactory.php(85): Illuminate\\Routing\\ResponseFactory->make(Object(Illuminate\\View\\View), 500, Array)
+#26 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(585): Illuminate\\Routing\\ResponseFactory->view('errors::500', Array, 500, Array)
+#27 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(490): Illuminate\\Foundation\\Exceptions\\Handler->renderHttpException(Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#28 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(356): Illuminate\\Foundation\\Exceptions\\Handler->prepareResponse(Object(Illuminate\\Http\\Request), Object(Symfony\\Component\\HttpKernel\\Exception\\HttpException))
+#29 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Exceptions\\Handler.php(61): Illuminate\\Foundation\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#30 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(427): App\\Exceptions\\Handler->render(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#31 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(115): Illuminate\\Foundation\\Http\\Kernel->renderException(Object(Illuminate\\Http\\Request), Object(Illuminate\\Database\\QueryException))
+#32 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#33 {main}
+"} 
+[2022-05-20 21:57:45] production.ERROR: Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist in C:\xampp\htdocs\dashboard\rasd\@core\vendor\laravel\framework\src\Illuminate\Database\Connection.php:359
+Stack trace:
+#0 C:\xampp\htdocs\dashboard\rasd\@core\vendor\laravel\framework\src\Illuminate\Database\Connection.php(359): PDO->prepare('select * from `...')
+#1 C:\xampp\htdocs\dashboard\rasd\@core\vendor\laravel\framework\src\Illuminate\Database\Connection.php(696): Illuminate\Database\Connection->Illuminate\Database\{closure}('select * from `...', Array)
+#2 C:\xampp\htdocs\dashboard\rasd\@core\vendor\laravel\framework\src\Illuminate\Database\Connection.php(663): Illuminate\Database\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:\xampp\htdocs\dashboard\rasd\@core\vendor\laravel\framework\src\Illuminate\Database\Connection.php(367): Illuminate\Database\Connection->run('select * from `...', Array, Object(Closure))
+#4 C:\xampp\htdocs\dashboard\rasd\@core\vendor\l {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist in C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:359
+Stack trace:
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): PDO->prepare('select * from `...')
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\l at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 {main}
+"} 
+[2022-05-20 21:57:59] production.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist (SQL: select * from `languages`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist (SQL: select * from `languages`) at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(568): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Providers\\AppServiceProvider.php(28): Illuminate\\Database\\Eloquent\\Model::all()
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(914): Illuminate\\Container\\Container->call(Array)
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(895): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#17 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 31)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(896): array_walk(Array, Object(Closure))
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#24 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#25 {main}
+
+[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:359)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): PDO->prepare('select * from `...')
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(568): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Providers\\AppServiceProvider.php(28): Illuminate\\Database\\Eloquent\\Model::all()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#17 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(914): Illuminate\\Container\\Container->call(Array)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(895): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#19 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 31)
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(896): array_walk(Array, Object(Closure))
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#24 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#25 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#26 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#27 {main}
+"} 
+[2022-05-20 21:58:00] production.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist (SQL: select * from `languages`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist (SQL: select * from `languages`) at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:703)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(568): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Providers\\AppServiceProvider.php(28): Illuminate\\Database\\Eloquent\\Model::all()
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(914): Illuminate\\Container\\Container->call(Array)
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(895): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#17 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 31)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(896): array_walk(Array, Object(Closure))
+#19 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#24 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#25 {main}
+
+[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rasd.languages' doesn't exist at C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:359)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(359): PDO->prepare('select * from `...')
+#1 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(696): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from `...', Array)
+#2 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(663): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(367): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#4 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2352): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#5 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2340): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2874): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(2341): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(615): Illuminate\\Database\\Query\\Builder->get(Array)
+#9 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(599): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#10 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(568): Illuminate\\Database\\Eloquent\\Builder->get(Array)
+#11 C:\\xampp\\htdocs\\dashboard\asd\\@core\\app\\Providers\\AppServiceProvider.php(28): Illuminate\\Database\\Eloquent\\Model::all()
+#12 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#13 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#15 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#16 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(653): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#17 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(914): Illuminate\\Container\\Container->call(Array)
+#18 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(895): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#19 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 31)
+#20 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(896): array_walk(Array, Object(Closure))
+#21 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#22 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#23 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#24 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#25 C:\\xampp\\htdocs\\dashboard\asd\\@core\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#26 C:\\xampp\\htdocs\\dashboard\asd\\index.php(74): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#27 {main}
+"} 

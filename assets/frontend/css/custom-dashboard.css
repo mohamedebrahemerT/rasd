@@ -2730,7 +2730,7 @@
 }
 .section-btn::after {
     content: "";
-    font-family: "Line Awesome Free";
+    font-family: 'Cairo', sans-serif !important;
     font-weight: 900;
 }
 @media (min-width: 320px) and (max-width: 991.98px) {
@@ -2803,7 +2803,7 @@
     color: var(--main-color-one);
 }
 .btn-see-more::before {
-    font-family: "Line Awesome Free";
+    font-family: 'Cairo', sans-serif !important;
     font-weight: 900;
     content: "";
     color: var(--main-color-one);
@@ -2823,7 +2823,7 @@
     color: var(--main-color-one);
 }
 .btn-replay::before {
-    font-family: "Line Awesome Free";
+    font-family: 'Cairo', sans-serif !important;
     font-weight: 900;
     content: "";
     color: var(--main-color-one);
@@ -3354,7 +3354,7 @@
     }
 }
 .overview-list .list:not(:last-child) .list-click::after {
-    font-family: "Line Awesome Free";
+    font-family: 'Cairo', sans-serif !important;
     font-weight: 900;
     content: "";
 }
@@ -3469,7 +3469,7 @@
 }
 .checkbox-inlines .check-input::after {
     content: "";
-    font-family: "Line Awesome Free";
+    font-family: 'Cairo', sans-serif !important;
     font-weight: 900;
     font-size: 10px;
     color: #fff;
@@ -3645,7 +3645,7 @@
     }
 }
 .faq-contents .faq-item .faq-title::after {
-    font-family: "Line Awesome Free";
+    font-family: 'Cairo', sans-serif !important;
     font-weight: 900;
     margin-right: 10px;
     content: "";

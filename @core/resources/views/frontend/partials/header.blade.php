@@ -12,6 +12,10 @@
     {!! render_favicon_by_id(get_static_option('site_favicon')) !!}
     {!! load_google_fonts() !!}
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600&family=Exo:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+
        <link rel="stylesheet" href="{{asset('assets/frontend/css/compress.min.css')}}">
        <!--<link rel="stylesheet" href="{{asset('assets/frontend/css/bootstrap.min-v4.6.0.css')}}">-->
        <!--<link rel="stylesheet" rel="preconnect"  href="{{asset('assets/frontend/css/line-awesome.min-v1.0.3.css')}}">-->
@@ -87,7 +91,10 @@
 $dark_mode_on = get_static_option('site_frontend_dark_mode') === 'on';
 $condition = $dark_mode_on ? $class : '';
 @endphp
-<body class="black-theme {{$condition}}">
+
+
+<body class="black-theme {{$condition}}" 
+style="font-family: 'Cairo', sans-serif !important;">
 
 @if(get_static_option('site_loader_animation'))
     <div class="preloader-inner">
