@@ -53,9 +53,64 @@
         <link rel="stylesheet" href="<?php echo e(asset('assets/backend/css/rtl.css')); ?>">
     <?php endif; ?>
 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600&family=Exo:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+
+  <?php if( get_default_language_direction() === 'rtl'): ?>
+
+<style type="text/css">
+    .metismenu li a::after {
+  position: absolute;
+  content: '\f107';
+  font-family: fontawesome;
+  right: 15px;
+  top: 12px;
+  color: #8d97ad;
+  font-size: 20px;
+  margin-right: 80%;
+}
+    .chart-title
+    {
+        text-align: center;
+    }
+    h1,h2,h3,h4,h5,h6,p,a,span
+    {
+          font-family: 'Cairo', sans-serif !important;
+
+    }
+</style>
+    <?php endif; ?>
+
+    <style type="text/css">
+        .metismenu li a span {
+  color: #fff;
+  font-weight: 400;
+}
+
+.metismenu li a::after {
+  position: absolute;
+  content: '\f107';
+  font-family: fontawesome;
+  right: 15px;
+  top: 12px;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 80%;
+}
+    
+
+    .metismenu li a i {
+  color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}    
+    </style>
+
 </head>
 
-<body>
+<body 
+style="font-family: 'Cairo', sans-serif !important;">
 
 <?php if(!empty(get_static_option('admin_loader_animation'))): ?>
 <div id="preloader">

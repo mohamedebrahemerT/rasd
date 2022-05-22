@@ -423,17 +423,9 @@
                                             href="{{route('admin.general.custom.js')}}">{{__('Custom JS')}}</a></li>
                                  @endcan
 
-                                @can('general-settings-licence-settings')
-                                <li class="{{active_menu('admin-home/general-settings/license-setting')}}"><a
-                                            href="{{route('admin.general.license.settings')}}">{{__('Licence Settings')}}</a>
-                                @endcan
-                                </li>
+                               
 
-                                @can('database-upgrade')
-                                 <li class="{{active_menu('admin-home/general-settings/database-upgrade')}}"><a
-                                        href="{{route('admin.general.database.upgrade')}}">{{__('Database Upgrade')}}</a>
-                                  </li>
-                                @endcan
+                                
 
                                 @can('general-settings-cache-settings')
                                 <li class="{{active_menu('admin-home/general-settings/cache-settings')}}"><a

@@ -5,7 +5,8 @@
 |----------------------------------------------------------------------------------------------------------------------------*/
 
 //Blogs
-Route::group(['prefix'=>'admin-home','middleware'=>'demo'],function() {
+Route::group(['prefix'=>'admin-home','middleware'=>'demo'],function() 
+{
 
     Route::group(['prefix'=>'blog'],function() {
         Route::get('/', 'BlogController@index')->name('admin.blog');

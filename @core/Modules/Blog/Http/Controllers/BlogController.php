@@ -46,9 +46,15 @@ class BlogController extends Controller
 
         $default_lang = $request->lang ?? LanguageHelper::default_slug();
 
-        if ($request->ajax()){
+        if ($request->ajax())
+        {
+           
 
-            $data = Blog::usingLocale($default_lang)->select('*')->orderBy('id','desc')->get();
+
+            $data = Blog::usingLocale($default_lang)
+            ->select('*')
+            ->orderBy('id','desc')->get();
+
             return DataTables::of($data)
                 ->addIndexColumn()
 
@@ -107,6 +113,8 @@ class BlogController extends Controller
                 ->rawColumns(['action','checkbox','image','status','category','title'])
                 ->make(true);
         }
+
+
 
         return view(self::BASE_PATH.'blog.index',compact('default_lang'));
     }

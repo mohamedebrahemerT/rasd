@@ -18,12 +18,12 @@
 @section('content')
     @php
        $statistics = [
-           ['title' => 'Total Admin','value' => $total_admin, 'icon' => 'user-secret','data_url'=> $data_url['admin']],
-           ['title' => 'Total User','value' => $total_user, 'icon' => 'user','data_url'=> $data_url['user']],
-           ['title' => 'Total Blogs','value' => $blog_count, 'icon' => 'blog','data_url'=> $data_url['blog']],
-           ['title' => 'Total Polls','value' => $all_poll, 'icon' => 'poll','data_url'=> $data_url['poll']],
-           ['title' => 'Total Advertisement','value' => $total_advertisement, 'icon' => 'ad','data_url'=> $data_url['advertisement']],
-           ['title' => 'Total Subscriber','value' => $total_subscriber, 'icon' => 'envelope-square','data_url'=> $data_url['subscriber']],
+           ['title' =>__('Total Admin'),'value' => $total_admin, 'icon' => 'user-secret','data_url'=> $data_url['admin']],
+           ['title' => __('Total User'),'value' => $total_user, 'icon' => 'user','data_url'=> $data_url['user']],
+           ['title' => __('Total newes'),'value' => $blog_count, 'icon' => 'blog','data_url'=> $data_url['blog']],
+           ['title' => __('Total Polls') ,'value' => $all_poll, 'icon' => 'poll','data_url'=> $data_url['poll']],
+           ['title' =>__('Total Advertisement') ,'value' => $total_advertisement, 'icon' => 'ad','data_url'=> $data_url['advertisement']],
+           ['title' => __('Total Subscriber'),'value' => $total_subscriber, 'icon' => 'envelope-square','data_url'=> $data_url['subscriber']],
        ];
     @endphp
 

@@ -14,7 +14,11 @@ class Blog extends Model
 
     protected $table = 'blogs';
     protected $fillable = ['category_id',
-        'user_id','title','slug','blog_content',
+        'user_id',
+        'title',
+        'source',
+        'url',
+        'slug','blog_content',
         'image','author','excerpt','status',
         'image_gallery','views','video_url','order_by',
         'visibility','featured','schedule_date',
@@ -22,6 +26,7 @@ class Blog extends Model
     ];
 
     public $translatable  = ['title','blog_content','excerpt'];
+      //   protected $hidden = ['source','url'];
     protected $dates = ['deleted_at'];
 
 

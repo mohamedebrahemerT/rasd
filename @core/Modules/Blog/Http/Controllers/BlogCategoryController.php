@@ -30,7 +30,9 @@ class BlogCategoryController extends Controller
     }
 
     public function index(Request $request){
-        $all_category = BlogCategory::select(['id','title','status','image'])->get();
+        $lang= $request->lang ?? LanguageHelper::default_slug();
+         app()->setLocale($lang);
+         $all_category = BlogCategory::select(['id','title','status','image'])->get();
         return view(self::BASE_PATH.'blog.category')->with([
             'all_category' => $all_category,
             'default_lang' => $request->lang ?? LanguageHelper::default_slug(),

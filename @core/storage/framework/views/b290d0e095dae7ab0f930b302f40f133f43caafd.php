@@ -439,17 +439,9 @@
                                             href="<?php echo e(route('admin.general.custom.js')); ?>"><?php echo e(__('Custom JS')); ?></a></li>
                                  <?php endif; ?>
 
-                                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-licence-settings')): ?>
-                                <li class="<?php echo e(active_menu('admin-home/general-settings/license-setting')); ?>"><a
-                                            href="<?php echo e(route('admin.general.license.settings')); ?>"><?php echo e(__('Licence Settings')); ?></a>
-                                <?php endif; ?>
-                                </li>
+                               
 
-                                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('database-upgrade')): ?>
-                                 <li class="<?php echo e(active_menu('admin-home/general-settings/database-upgrade')); ?>"><a
-                                        href="<?php echo e(route('admin.general.database.upgrade')); ?>"><?php echo e(__('Database Upgrade')); ?></a>
-                                  </li>
-                                <?php endif; ?>
+                                
 
                                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('general-settings-cache-settings')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/general-settings/cache-settings')); ?>"><a

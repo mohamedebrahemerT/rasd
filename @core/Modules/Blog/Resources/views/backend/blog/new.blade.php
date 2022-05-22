@@ -40,10 +40,23 @@
                               id="blog_new_form">
                             @csrf
                             <input type="hidden" name="lang" value="{{$default_lang}}">
+
                             <div class="form-group">
                                 <label for="title">{{__('Title')}}</label>
                                 <input type="text" class="form-control" name="title" id="title"
                                        placeholder="{{__('Title')}}">
+                            </div>
+
+                             <div class="form-group">
+                                <label for="source">{{__('source')}}</label>
+                                <input type="text" class="form-control" name="source" id="source"
+                                       placeholder="{{__('source')}}">
+                            </div>
+
+                             <div class="form-group">
+                                <label for="url">{{__('url')}}</label>
+                                <input type="text" class="form-control" name="url" id="url"
+                                       placeholder="{{__('url')}}">
                             </div>
 
                             <div class="form-group permalink_label">

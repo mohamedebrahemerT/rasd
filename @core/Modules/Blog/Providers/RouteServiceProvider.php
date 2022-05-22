@@ -4,6 +4,7 @@ namespace Modules\Blog\Providers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use App\Helpers\LanguageHelper;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $lang= $request->lang ?? LanguageHelper::default_slug();
+         app()->setLocale($lang);
         parent::boot();
     }
 

@@ -95,9 +95,9 @@
     top: 0;
     z-index: 1;
     color: #fff;
-    content: "\f058";
+    content: "";
     font-size: 30px;
-    font-family: "Font Awesome 5 Free";
+ 
     font-weight: 900;
     line-height: 30px;
     width: 40px;
@@ -193,7 +193,7 @@ input:checked + .slider:before {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 26px;
-    font-family: "Font Awesome 5 Free";
+  font-family: 'Cairo', sans-serif !important;
 }
 
 input:checked + .slider-color-mode {
@@ -201,7 +201,7 @@ input:checked + .slider-color-mode {
 }
 input:checked + .slider-color-mode:before {
     content: "\f186";
-    font-family: "Font Awesome 5 Free";
+  font-family: 'Cairo', sans-serif !important;
     color: black;
 
 }
@@ -706,6 +706,8 @@ select.form-control:not([size]):not([multiple]) {
     color: #313b3d;
     letter-spacing: 0;
     margin-right: 30px;
+      font-family: 'Cairo', sans-serif !important;
+
 }
 .btn-link:hover {
     text-decoration: none;

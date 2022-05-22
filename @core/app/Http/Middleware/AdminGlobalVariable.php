@@ -13,7 +13,8 @@ class AdminGlobalVariable
 
     public function handle(Request $request, Closure $next)
     {
-        view()->composer('*', function ($view) {
+        view()->composer('*', function ($view) 
+        {
             $lang = !empty(session()->get('lang')) ? session()->get('lang') : Language::where('default',1)->first()->slug;
             $all_languages = Language::all();
             $home_variant_number = get_static_option('home_page_variant');

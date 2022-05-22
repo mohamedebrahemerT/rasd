@@ -40,10 +40,23 @@
                               id="blog_new_form">
                             @csrf
                             <input type="hidden" name="lang" value="{{$default_lang}}">
+
                             <div class="form-group">
                                 <label for="title">{{__('Title')}}</label>
                                 <input type="text" class="form-control" name="title" id="title"
                                        value="{{$blog_post->getTranslation('title',$default_lang)}}">
+                            </div>
+
+                               <div class="form-group">
+                                <label for="source">{{__('source')}}</label>
+                                <input type="text" class="form-control" name="source" id="source"
+                                       value="{{$blog_post->source}}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="url">{{__('url')}}</label>
+                                <input type="text" class="form-control" name="url" id="url"
+                                       value="{{$blog_post->url}}">
                             </div>
 
                             <div class="form-group permalink_label">
@@ -267,7 +280,8 @@
 
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <label for="featured"><strong>{{__('Select Categories')}}</strong></label>
+                                            <label for="featured"><strong>
+                                    {{__('Select Categories')}}</strong></label>
                                             <div class="category-section">
                                                 <ul>
                                                     @foreach($all_category as $category)

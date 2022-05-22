@@ -15,12 +15,14 @@ class Demo
      */
     public function handle($request, Closure $next)
     {
-        if($request->isMethod('POST') || $request->isMethod('PUT')) {
-            if ($request->ajax()){
+        /*if($request->isMethod('POST') || $request->isMethod('PUT')) 
+        {
+            if ($request->ajax())
+            {
                 return response()->json(['type' => 'warning' , 'msg' => 'This is Demo version. You can not change anything.']);
             }
             return redirect()->back()->with(['type' => 'warning' , 'msg' => 'This is Demo version. You can not change anything.']);
-        }
+        }*/
         return $next($request);
     }
 }

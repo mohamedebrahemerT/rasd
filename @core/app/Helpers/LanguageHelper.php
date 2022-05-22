@@ -51,7 +51,8 @@ class LanguageHelper
 
     public static function default_slug()
     {
-        if (self::$default_slug === null) {
+        if (self::$default_slug === null) 
+        {
             $default = self::lang_instance()->where('default', '1')->first();
             self::$default_slug = $default->slug;
         }

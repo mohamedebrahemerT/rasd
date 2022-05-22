@@ -64,7 +64,7 @@
                     $date = \Illuminate\Support\Carbon::now()->format('l, d M Y');
                 @endphp
                 <div class="date-and-time">
-                    <span class="day">{{$date}}</span>
+                    <span class="day">{{ArabicDate()</span>
                 </div>
             </div>
         </div>

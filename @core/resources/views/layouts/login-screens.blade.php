@@ -15,9 +15,34 @@
     <link rel="stylesheet" href="{{asset('assets/backend/css/default-css.css')}}">
     <link rel="stylesheet" href="{{asset('assets/backend/css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('assets/backend/css/responsive.css')}}">
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600&family=Exo:wght@200&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+
+ @if( get_default_language_direction() === 'rtl')
+
+<style type="text/css">
+  
+    h1,h2,h3,h4,h5,h6,p,a,span
+    {
+          font-family: 'Cairo', sans-serif !important;
+
+    }
+    .form-gp label {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  color: #b3b2b2;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+</style>
+
+    @endif
 </head>
 
-<body>
+<body   @if( get_default_language_direction() === 'rtl') style="direction: rtl; text-align: right;font-family: 'Cairo', sans-serif !important;"    @endif>
     @yield('content')
 
     <!-- jquery latest version -->

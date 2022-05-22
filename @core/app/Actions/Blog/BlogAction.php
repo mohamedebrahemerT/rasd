@@ -22,6 +22,11 @@ class BlogAction
             ->setTranslation('excerpt',$request->lang, purify_html($request->excerpt))
             ->save();
 
+              Blog::where('id',$blog->id)->update([
+            'source'=>$request->source,
+            'url'=>$request->url,
+        ]);
+
         $slug = !empty($request->slug) ? $request->slug : Str::slug($request->title);
         $slug_check = Blog::where(['slug' => $slug])->count();
         $slug = $slug_check > 0 ? $slug.'-2' : $slug;
@@ -63,6 +68,8 @@ class BlogAction
             'twitter_meta_description'=> purify_html($request->twitter_meta_description),
             'twitter_meta_image'=> $request->twitter_meta_image,
         ];
+        
+
         $blog->save();
         $blog->meta_data()->create($Metas);
 
@@ -72,7 +79,17 @@ class BlogAction
 
     public function update_execute(Request $request ,$id) : void
     {
+
+     
         $blog_update =  Blog::findOrFail($id);
+
+        Blog::where('id',$id)->update([
+            'source'=>$request->source,
+            'url'=>$request->url,
+        ]);
+          
+         
+
 
         $blog_update
             ->setTranslation('title',$request->lang, purify_html($request->title))
@@ -104,6 +121,8 @@ class BlogAction
         $blog_update->views = 0;
         $blog_update->video_url =$request->video_url;
         $blog_update->video_duration =$request->video_duration;
+      
+      
 
         $Metas = [
             'meta_title'=> purify_html($request->meta_title),
@@ -124,6 +143,10 @@ class BlogAction
         try {
             $blog_update->meta_data()->update($Metas);
             $blog_update->save();
+
+     
+
+
             DB::commit();
 
         }catch (\Throwable $th){
