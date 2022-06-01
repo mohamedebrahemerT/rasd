@@ -181,6 +181,8 @@ return [
          * Provider registered by developers
          * */
         App\Providers\ValidatorServiceProvider::class,
+
+            Vedmant\FeedReader\FeedReaderServiceProvider::class, // Add this line
     ],
 
     /*
@@ -235,6 +237,8 @@ return [
         'PaytmWallet' => Anand\LaravelPaytmWallet\Facades\PaytmWallet::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Rave' => KingFlamez\Rave\Facades\Rave::class,
+            'FeedReader' => Vedmant\FeedReader\Facades\FeedReader::class, // Add this line
+
     ],
 
 ];
