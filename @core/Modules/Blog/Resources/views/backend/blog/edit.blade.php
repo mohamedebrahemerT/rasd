@@ -169,7 +169,7 @@
                                             <div class="category-section">
                                                 
 
-                                                 <select name="category_id" class="form-control" id="category_id">
+                                                 <select name="category_id[]" class="form-control" id="category_id">
                         @foreach($all_category as $category)
    <option  
        @foreach($blog_post->category_id as $cat)

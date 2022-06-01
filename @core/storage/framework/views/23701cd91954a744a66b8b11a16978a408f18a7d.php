@@ -230,7 +230,7 @@
                                             <div class="category-section">
                                                 
 
-                                                 <select name="category_id" class="form-control" id="category_id">
+                                                 <select name="category_id[]" class="form-control" id="category_id">
                         <?php $__currentLoopData = $all_category; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
    <option  
        <?php $__currentLoopData = $blog_post->category_id; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $cat): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
