@@ -1,0 +1,1 @@
+<?php /**PATH C:\xampp\htdocs\dashboard\rasd\@core\resources\views/frontend/pages/blog-single-one-portions/image-and-gallery.blade.php ENDPATH**/ ?>

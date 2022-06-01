@@ -13,7 +13,9 @@ class Blog extends Model
     use HasFactory , HasTranslations, SoftDeletes;
 
     protected $table = 'blogs';
-    protected $fillable = ['category_id',
+    protected $fillable = [
+        'category_id',
+        'sources_id',
         'user_id',
         'title',
         'source',
@@ -53,8 +55,13 @@ class Blog extends Model
         return Admin::find($this->attributes['admin_id']);
     }
 
-    public function comments(){
-        return $this->hasMany(BlogComment::class,'blog_id','id');
+  
+
+      public function Blogsources(){
+        return $this->belongsTo(Blogsources::class,'sources_id');
     }
+
+
+     
 
 }

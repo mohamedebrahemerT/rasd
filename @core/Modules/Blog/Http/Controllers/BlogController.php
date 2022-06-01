@@ -13,6 +13,8 @@ use App\Http\Requests\BlogUpdateRequest;
 use App\Language;
 use App\Mail\BasicMail;
 use App\Tag;
+use App\Blogsources;
+
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -121,16 +123,20 @@ class BlogController extends Controller
     public function new_blog(Request $request){
 
         $all_category = BlogCategory::all();
+        $all_sources = Blogsources::all();
+
         $all_tags = Tag::all();
 
         return view(self::BASE_PATH.'blog.new')->with([
             'all_category' => $all_category,
+            'all_sources' => $all_sources,
             'all_tags' => $all_tags,
             'default_lang' => $request->lang ?? LanguageHelper::default_slug(),
         ]);
     }
     public function store_new_blog(BlogInsertRequest $request, BlogAction $blogAction) : RedirectResponse
     {
+          
         $blogAction->store_execute($request);
         return back()->with(FlashMsg::item_new('Blog Created Successfully..'));
     }
@@ -138,9 +144,12 @@ class BlogController extends Controller
     public function edit_blog(Request $request,$id){
         $blog_post = Blog::find($id);
         $all_category = BlogCategory::select(['id','title'])->get();
+        $all_sources = Blogsources::all();
+        
         $all_tags = Tag::select(['id','name'])->get();
         return view(self::BASE_PATH.'blog.edit')->with([
             'all_category' => $all_category,
+            'all_sources' => $all_sources,
             'all_tags' => $all_tags,
             'blog_post' => $blog_post,
             'default_lang' => $request->lang ?? LanguageHelper::default_slug(),

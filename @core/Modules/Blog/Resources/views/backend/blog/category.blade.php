@@ -152,8 +152,11 @@
                                    <div class="form-group">
                                        <label for="edit_status">{{__('Status')}}</label>
                                        <select name="status" class="form-control" id="edit_status">
+                                          <option value="publish">{{__("Publish")}}</option>
                                            <option value="draft">{{__("Draft")}}</option>
-                                           <option value="publish">{{__("Publish")}}</option>
+
+                                         
+
                                        </select>
                                    </div>
 

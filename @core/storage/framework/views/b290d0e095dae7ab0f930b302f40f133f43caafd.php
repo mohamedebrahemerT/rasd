@@ -82,6 +82,12 @@
                              <li class="<?php echo e(active_menu('admin-home/blog-category')); ?>"><a
                                         href="<?php echo e(route('admin.blog.category')); ?>"><?php echo e(__('Category')); ?></a></li>
                              <?php endif; ?>
+
+                              <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('blog-sources-list')): ?>
+                             <li class="<?php echo e(active_menu('admin-home/blog-sources')); ?>"><a
+                                        href="<?php echo e(route('admin.blog.sources')); ?>"><?php echo e(__('sources')); ?></a></li>
+                             <?php endif; ?>
+
                                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('blog-tag-list')): ?>
                                 <li class="<?php echo e(active_menu('admin-home/blog-tags')); ?>"><a
                                             href="<?php echo e(route('admin.blog.tags')); ?>"><?php echo e(__('Tags')); ?></a></li>

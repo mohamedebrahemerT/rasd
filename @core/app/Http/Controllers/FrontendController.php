@@ -56,7 +56,8 @@ class FrontendController extends Controller
 
     public function dynamic_single_page($slug)
     {
-        $page_post = Page::usingLocale(get_user_lang())->where('slug', $slug)->first();
+
+         $page_post = Page::usingLocale(get_user_lang())->where('slug', $slug)->first();
         if(empty($page_post)){
             abort(404);
         }

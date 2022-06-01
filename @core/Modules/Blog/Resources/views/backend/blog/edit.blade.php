@@ -1,5 +1,9 @@
 @extends('backend.admin-master')
 @section('style')
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
     <x-summernote.css/>
     <link rel="stylesheet" href="{{asset('assets/backend/css/bootstrap-tagsinput.css')}}">
     <x-media.css/>
@@ -47,10 +51,22 @@
                                        value="{{$blog_post->getTranslation('title',$default_lang)}}">
                             </div>
 
-                               <div class="form-group">
-                                <label for="source">{{__('source')}}</label>
-                                <input type="text" class="form-control" name="source" id="source"
-                                       value="{{$blog_post->source}}">
+                                <div class="form-group">
+                             <label for="sources_id"><strong>{{__('Select sources')}}</strong></label>
+                             <select name="sources_id" class="form-control js-example-basic-single" id="sources_id">
+                        @foreach($all_sources as $source)
+   <option
+
+   @if($blog_post->sources_id )
+ @foreach($blog_post->sources_id as $src)
+                                   {{ $src->id === $source->id ? 'selected' : '' }}
+                                                                    @endforeach
+   @endif
+
+    value="{{$source->id}}">  {{purify_html($source->getTranslation('title',$default_lang))}}
+   </option>                                         
+  @endforeach
+                                            </select>
                             </div>
 
                             <div class="form-group">
@@ -84,138 +100,7 @@
                     </div>
                 </div>
 
-                <div class="row mt-4">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body meta">
-                                <h5 class="header-title">{{__('Meta Section')}}</h5>
-                                <div class="row">
-                                    <div class="col-lg-3">
-                                        <div class="nav flex-column nav-pills" id="v-pills-tab"
-                                             role="tablist" aria-orientation="vertical">
-                                            <a class="nav-link active" id="v-pills-home-tab"
-                                               data-toggle="pill" href="#v-pills-home" role="tab"
-                                               aria-controls="v-pills-home"
-                                               aria-selected="true">{{__('Blog Meta')}}</a>
-                                            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
-                                               href="#v-pills-profile" role="tab"
-                                               aria-controls="v-pills-profile"
-                                               aria-selected="false">{{__('Facebook Meta')}}</a>
-                                            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
-                                               href="#v-pills-messages" role="tab"
-                                               aria-controls="v-pills-messages"
-                                               aria-selected="false">{{__('Twitter Meta')}}</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-9">
-                                        <div class="tab-content" id="v-pills-tabContent">
-
-                                            <div class="tab-pane fade show active" id="v-pills-home"
-                                                 role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                                <div class="form-group">
-                                                    <label for="title">{{__('Meta Title')}}</label>
-                                                    <input type="text" class="form-control" name="meta_title"
-                                                           value="{{$blog_post->meta_data->meta_title ?? ''}}">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="slug">{{__('Meta Tags')}}</label>
-                                                    <input type="text" class="form-control"  data-role="tagsinput" name="meta_tags"
-                                                           value="{{$blog_post->meta_data->meta_tags ?? ''}}">
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="title">{{__('Meta Description')}}</label>
-                                                        <textarea name="meta_description"
-                                                                  class="form-control max-height-140"
-                                                                  cols="20"
-                                                                  rows="4">{!! $blog_post->meta_data->meta_description ?? '' !!}</textarea>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                                 aria-labelledby="v-pills-profile-tab">
-                                                <div class="form-group">
-                                                    <label for="title">{{__('Facebook Meta Tag')}}</label>
-                                                    <input type="text" class="form-control" data-role="tagsinput"
-                                                           name="facebook_meta_tags" value="{{$blog_post->meta_data->facebook_meta_tags ?? ''}}">
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="title">{{__('Facebook Meta Description')}}</label>
-                                                        <textarea name="facebook_meta_description"
-                                                                  class="form-control max-height-140 meta-desc"
-                                                                  cols="20"
-                                                                  rows="4">{!! $blog_post->meta_data->facebook_meta_description ?? '' !!}</textarea>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group ">
-                                                    <label for="og_meta_image">{{__('Facebook Meta Image')}}</label>
-                                                    <div class="media-upload-btn-wrapper">
-                                                        <div class="img-wrap">
-                                                            {!! render_attachment_preview_for_admin($blog_post->meta_data->facebook_meta_image ?? '') !!}
-                                                        </div>
-                                                        <input type="hidden" id="facebook_meta_image" name="facebook_meta_image"
-                                                               value="{{$blog_post->meta_data->facebook_meta_image ?? ''}}">
-                                                        <button type="button" class="btn btn-info media_upload_form_btn"
-                                                                data-btntitle="{{__('Select Image')}}"
-                                                                data-modaltitle="{{__('Upload Image')}}" data-toggle="modal"
-                                                                data-target="#media_upload_modal">
-                                                            {{'Change Image'}}
-                                                        </button>
-                                                    </div>
-                                                    <small class="form-text text-muted">{{__('allowed image format: jpg,jpeg,png')}}</small>
-                                                </div>
-                                            </div>
-
-                                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                                 aria-labelledby="v-pills-messages-tab">
-                                                <div class="form-group">
-                                                    <label for="title">{{__('Twitter Meta Tag')}}</label>
-                                                    <input type="text" class="form-control" data-role="tagsinput"
-                                                           name="twitter_meta_tags" value=" {{$blog_post->meta_data->twitter_meta_tags ?? ''}}">
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="title">{{__('Twitter Meta Description')}}</label>
-                                                        <textarea name="twitter_meta_description"
-                                                                  class="form-control max-height-140 meta-desc"
-                                                                  cols="20"
-                                                                  rows="4">{!! $blog_post->meta_data->twitter_meta_description ?? '' !!}</textarea>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label for="og_meta_image">{{__('Twitter Meta Image')}}</label>
-                                                    <div class="media-upload-btn-wrapper">
-                                                        <div class="img-wrap">
-                                                            {!! render_attachment_preview_for_admin($blog_post->meta_data->twitter_meta_image ?? '') !!}
-                                                        </div>
-                                                        <input type="hidden" id="twitter_meta_image" name="twitter_meta_image"
-                                                               value="{{$blog_post->meta_data->twitter_meta_image ?? ''}}">
-                                                        <button type="button" class="btn btn-info media_upload_form_btn"
-                                                                data-btntitle="{{__('Select Image')}}"
-                                                                data-modaltitle="{{__('Upload Image')}}" data-toggle="modal"
-                                                                data-target="#media_upload_modal">
-                                                            {{'Change Image'}}
-                                                        </button>
-                                                    </div>
-                                                    <small class="form-text text-muted">{{__('allowed image format: jpg,jpeg,png')}}</small>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+             
             </div>
 
             <div class="col-lg-4">
@@ -279,28 +164,30 @@
                                 <div class="row">
 
                                     <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="featured"><strong>
-                                    {{__('Select Categories')}}</strong></label>
+                                       <div class="form-group">
+                                            <label for="featured"><strong>{{__('Select Categories')}}</strong></label>
                                             <div class="category-section">
-                                                <ul>
-                                                    @foreach($all_category as $category)
-                                                        <li>
-                                                            <input type="checkbox" name="category_id[]"
-                                                                   id="exampleCheck1" value="{{$category->id}}"
+                                                
 
-                                                                   @foreach($blog_post->category_id as $cat)
-                                                                       {{ $cat->id === $category->id ? 'checked' : '' }}
+                                                 <select name="category_id" class="form-control" id="category_id">
+                        @foreach($all_category as $category)
+   <option  
+       @foreach($blog_post->category_id as $cat)
+                                   {{ $cat->id === $category->id ? 'selected' : '' }}
                                                                     @endforeach
-                                                            >
-                                                            <label class="ml-1">
-                                                                {{purify_html($category->getTranslation('title',$default_lang))}}
-                                                            </label>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
+
+   value="{{$category->id}}">  {{purify_html($category->getTranslation('title',$default_lang))}}</option>
+                                                
+  @endforeach
+                                             
+                                          
+                                            </select>
+
+                                                  
+                                               
                                             </div>
                                         </div>
+
 
                                         <div class="form-group " id="blog_tag_list">
                                             <label for="title">{{__('Blog Tag')}}</label>
@@ -651,5 +538,16 @@
                 $('.password-section').removeClass('d-none');
                  password.val(exist_password_value);
             }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script type="text/javascript">
+        // In your Javascript (external .js resource or <script> tag)
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+        
     </script>
 @endsection

@@ -62,6 +62,16 @@ Route::group(['prefix'=>'admin-home','middleware'=>'demo'],function()
         Route::post('/bulk-action', 'BlogCategoryController@bulk_action')->name('admin.blog.category.bulk.action');
     });
 
+
+        //BACKEND sources AREA
+    Route::group(['prefix'=>'blog-sources'],function(){
+        Route::get('/','BlogsourcesController@index')->name('admin.blog.sources');
+        Route::post('/store','BlogsourcesController@new_sources')->name('admin.blog.sources.store');
+        Route::post('/update','BlogsourcesController@update_sources')->name('admin.blog.sources.update');
+        Route::post('/delete/all/lang/{id}','BlogsourcesController@delete_sources_all_lang')->name('admin.blog.sources.delete.all.lang');
+        Route::post('/bulk-action', 'BlogsourcesController@bulk_action')->name('admin.blog.sources.bulk.action');
+    });
+
     //BACKEND BLOG TAGS
     Route::group(['prefix'=>'blog-tags'],function(){
         Route::get('/','BlogTagsController@index')->name('admin.blog.tags');
@@ -84,7 +94,9 @@ $blog_page_slug = get_page_slug(get_static_option('blog_page'),'blog');
 Route::group(['prefix' => $blog_page_slug,'namespace' => 'Frontend', 'middleware' => ['setlang','globalVariable','maintains_mode']],function (){
     Route::get('/search','BlogController@blog_search_page')->name('frontend.blog.search');
     Route::get('/get/search','BlogController@blog_get_search')->name('frontend.blog.get.search');
+
     Route::get('/{slug}','BlogController@blog_single')->name('frontend.blog.single');
+
     Route::get('/category/{id}/{any}','BlogController@category_wise_blog_page')->name('frontend.blog.category');
     Route::get('/tags/{any}','BlogController@tags_wise_blog_page')->name('frontend.blog.tags.page');
     Route::get('blog/autocomplete-search','BlogController@autocompleteSearch')->name('frontend.blog.autocomplete.search');

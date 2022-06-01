@@ -43,7 +43,7 @@ class BlogCategoryController extends Controller
         $this->validate($request,[
             'title' => 'required|string|max:191|unique:blog_categories',
             'status' => 'required|string|max:191',
-            'image' => 'required|string|max:191',
+            'image' => 'sometimes|nullable|string|max:191',
         ]);
 
         $category = new BlogCategory();
@@ -58,7 +58,7 @@ class BlogCategoryController extends Controller
     public function update_category(Request $request){
         $this->validate($request,[
             'title' => 'required|string|max:191|unique:blog_categories',
-            'status' => 'required|string|max:191',
+            'status' => 'sometimes|nullable|string|max:191',
         ]);
 
         $category =  BlogCategory::findOrFail($request->id);

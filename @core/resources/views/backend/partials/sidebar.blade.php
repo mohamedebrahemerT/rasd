@@ -77,6 +77,12 @@
                              <li class="{{active_menu('admin-home/blog-category')}}"><a
                                         href="{{route('admin.blog.category')}}">{{__('Category')}}</a></li>
                              @endcan
+
+                              @can('blog-sources-list')
+                             <li class="{{active_menu('admin-home/blog-sources')}}"><a
+                                        href="{{route('admin.blog.sources')}}">{{__('sources')}}</a></li>
+                             @endcan
+
                                 @can('blog-tag-list')
                                 <li class="{{active_menu('admin-home/blog-tags')}}"><a
                                             href="{{route('admin.blog.tags')}}">{{__('Tags')}}</a></li>

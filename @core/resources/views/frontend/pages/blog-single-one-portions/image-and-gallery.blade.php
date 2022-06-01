@@ -1,4 +1,4 @@
-<div class="main-img-box ">
+{{--<div class="main-img-box ">
     @if(!empty($blog_post->image_gallery))
         <div class="global-slick-init slick-space-adjust " data-infinite="true" data-slidesToShow="1"
              data-slidesToScroll="1" data-speed="500" data-cssEase="linear" data-arrows="false" data-dots="false"
@@ -35,3 +35,5 @@
            class="category-style-01 v-02 {{$colors[$key % count($colors)]}}">{{$cat->getTranslation('title',$user_select_lang_slug) ?? __('Uncategorized')}}</a>
     @endforeach
 </div>
+
+--}}

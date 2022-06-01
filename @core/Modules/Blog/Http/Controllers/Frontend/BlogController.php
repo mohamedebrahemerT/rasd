@@ -29,8 +29,11 @@ class BlogController extends Controller
 
     public function blog_single($slug)
     {
-
-        $blog_post = Blog::where(['slug'=> $slug,'status'=> 'publish'])->first();
+     
+         $blog_post = Blog::
+       where('slug',$slug)->
+       where('status','publish')
+       ->first();
 
         if (empty($blog_post)) {
             abort(404);

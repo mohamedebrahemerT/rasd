@@ -282,14 +282,18 @@ LEFT;
 private function leftBarBlogVideo($left_blog_video){
     
 
-    if(!empty($left_blog_video)){
-        $blogVideo = Blog::where('id',$left_blog_video)->where('status','publish')->first();
+    if(!empty($left_blog_video))
+    {
+        if (Blog::where('id',$left_blog_video)->where('status','publish')->first()) 
+        {
+           $blogVideo = Blog::where('id',$left_blog_video)->where('status','publish')->first();
         $image = render_background_image_markup_by_attachment_id($blogVideo->image);
         $video_url = $blogVideo->video_url;
         $static_icon = 'assets/frontend/img/videos/play-icon/02.svg';
+        }
     }
 
-    return <<<LEFTVIDEO
+    return '
 
        <div class="image-blog-style-01">
             <div class="img-box video-blog">
@@ -303,7 +307,7 @@ private function leftBarBlogVideo($left_blog_video){
             </div>
         </div>
 
-LEFTVIDEO;
+';
 
 
 }
@@ -312,7 +316,8 @@ private function centerBlog($center_single_blog){
     $current_lang = LanguageHelper::user_lang_slug();
     $centerBlog = Blog::where('id',$center_single_blog)->where('status','publish')->first();
 
-    $bg_image = render_background_image_markup_by_attachment_id($centerBlog->image);
+   if (Blog::where('id',$center_single_blog)->where('status','publish')->first()) {
+       $bg_image = render_background_image_markup_by_attachment_id($centerBlog->image);
     $route = route('frontend.blog.single', $centerBlog->slug);
     $title = Str::words($centerBlog->getTranslation('title', $current_lang), 15);
     $description = Str::words(SanitizeInput::esc_html($centerBlog->getTranslation('blog_content', $current_lang)),65);
@@ -332,10 +337,11 @@ private function centerBlog($center_single_blog){
         $category_route = route('frontend.blog.category', ['id' => $cat->id, 'any' => Str::slug($cat->title)]);
         $category_markup .= ' <a href="' . $category_route . '"><span class="text">' . $category . '</span></a>';
     }
+   }
 
 
-return <<<CENTERBLOG
-   <div class="blog-grid-style-03 large">
+return 
+   '<div class="blog-grid-style-03 large">
         <div class="img-box">
            <a href="$route"> <div class="background-img lazy"{$bg_image} data-height="580"></div></a>
         </div>
@@ -362,7 +368,7 @@ return <<<CENTERBLOG
         </div>
     </div>
 
-CENTERBLOG;
+';
 
 
 }
