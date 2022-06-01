@@ -33,7 +33,7 @@ class BlogAction
 
          $blog->slug = purify_html($slug);
         $blog->category_id = json_encode($request->category_id);
-        $blog->sources_id = json_encode($request->sources_id);
+        $blog->sources_id = $request->sources_id;
 
 
         $tag = $request->tag_id;
@@ -106,7 +106,7 @@ class BlogAction
             $blog_update->slug = purify_html($slug);
         }
         $blog_update->category_id = json_encode($request->category_id);
-        $blog_update->sources_id = json_encode($request->sources_id);
+        $blog_update->sources_id = $request->sources_id;
        
 
         $tag = $request->tag_id;
