@@ -113,14 +113,14 @@ $blogs = App\Blog::get();
 
         <div class="row">
             <div class="col-lg-12">
-                <table class="table" id="example">
+                <table class="table" id="example" style="text-align: center;">
   <thead>
-    <tr>
-          <th scope="col"> تاريخ النشر  </th>
-      <th scope="col">المحور</th>
-      <th scope="col">عنوان الخبر</th>
-      <th scope="col">المصدر</th>
-      <th scope="col"> ملخص الخبر</th>
+    <tr style="text-align: center;">
+          <th scope="col" style="text-align: center;"> تاريخ النشر  </th>
+      <th scope="col" style="text-align: center;">المحور</th>
+      <th scope="col" style="text-align: center;">عنوان الخبر</th>
+      <th scope="col" style="text-align: center;">المصدر</th>
+      <th scope="col" style="text-align: center;"> ملخص الخبر</th>
   
     </tr>
   </thead>

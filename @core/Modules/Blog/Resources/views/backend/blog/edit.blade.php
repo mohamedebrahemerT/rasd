@@ -53,14 +53,14 @@
 
                                 <div class="form-group">
                              <label for="sources_id"><strong>{{__('Select sources')}}</strong></label>
-                             <select name="sources_id" class="form-control js-example-basic-single" id="sources_id">
+                             <select style="text-align:right;" name="sources_id" class="form-control js-example-basic-single" id="sources_id">
                         @foreach($all_sources as $source)
    <option
 
    @if($blog_post->sources_id )
- @foreach($blog_post->sources_id as $src)
-                                   {{ $src->id === $source->id ? 'selected' : '' }}
-                                                                    @endforeach
+ 
+                {{ $blog_post->id === $source->id ? 'selected' : '' }}
+                                                                  
    @endif
 
     value="{{$source->id}}">  {{purify_html($source->getTranslation('title',$default_lang))}}
