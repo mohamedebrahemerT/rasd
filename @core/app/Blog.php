@@ -25,6 +25,7 @@ class Blog extends Model
         'image_gallery','views','video_url','order_by',
         'visibility','featured','schedule_date',
         'admin_id','created_by','tag_id','breaking_news','password','password_verified'
+        ,'date'
     ];
 
     public $translatable  = ['title','blog_content','excerpt'];

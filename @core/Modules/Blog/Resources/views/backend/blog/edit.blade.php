@@ -43,7 +43,22 @@
                         <form action="{{route('admin.blog.update',$blog_post->id)}}" method="post" enctype="multipart/form-data"
                               id="blog_new_form">
                             @csrf
-                            <input type="hidden" name="lang" value="{{$default_lang}}">
+                  <input type="hidden" name="lang" value="{{$default_lang}}">
+
+                    <div class="form-group">
+                                <label for="date">{{__('date')}}</label>
+             <input type="date" class="form-control" name="date" id="date"
+                                       placeholder="{{__('date')}}"
+                                        value="{{$blog_post->date}}">
+                            </div>
+
+                               <!--div class="form-group">
+                                <label for="time">{{__('time')}}</label>
+             <input type="time" class="form-control" name="time" id="time"
+                                       placeholder="{{__('time')}}"
+                                        value="{{$blog_post->time}}">
+                            </div -->
+
 
                             <div class="form-group">
                                 <label for="title">{{__('Title')}}</label>

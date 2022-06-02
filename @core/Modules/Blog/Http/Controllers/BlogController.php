@@ -91,8 +91,22 @@ class BlogController extends Controller
                     return General::statusSpan($row->status);
                 })
 
-                ->addColumn('date',function ($row){
-                    return date_format($row->created_at,'d-M-Y');
+                ->addColumn('date',function ($row)
+                {
+
+                     if($row->date == null)
+                  
+         {
+
+                    return date_format($row->created_at,'d-m-Y');
+
+         }                                  
+                else
+                {
+                return   $row->date;
+                }
+                 
+               
                 })
 
 

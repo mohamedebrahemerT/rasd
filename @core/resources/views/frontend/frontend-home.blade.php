@@ -27,7 +27,7 @@
 use App\Helpers\LanguageHelper;
 $all_category = App\BlogCategory::select(['id','title','status','image'])->get();
 $all_source = App\Blogsources::select(['id','title','status','image'])->get();
-$blogs = App\Blog::get();
+$blogs = App\Blog::orderBy('id','desc')->get();
         $default_lang = $request->lang ?? LanguageHelper::default_slug();
  
  
@@ -128,7 +128,18 @@ $blogs = App\Blog::get();
                       @foreach($blogs as $data)
 
     <tr>
-             <td> {{$data->created_at}}</td>
+             <td> 
+                @if($data->date == null)
+                  
+{{date_format($data->created_at,'d-m-Y')
+                   }}                  
+                @else
+                 {{$data->date}} 
+                 
+                @endif
+            
+
+            </td>
       <td>
 
            @foreach($data->category_id as $cat)

@@ -101,7 +101,22 @@
                         <form action="<?php echo e(route('admin.blog.update',$blog_post->id)); ?>" method="post" enctype="multipart/form-data"
                               id="blog_new_form">
                             <?php echo csrf_field(); ?>
-                            <input type="hidden" name="lang" value="<?php echo e($default_lang); ?>">
+                  <input type="hidden" name="lang" value="<?php echo e($default_lang); ?>">
+
+                    <div class="form-group">
+                                <label for="date"><?php echo e(__('date')); ?></label>
+             <input type="date" class="form-control" name="date" id="date"
+                                       placeholder="<?php echo e(__('date')); ?>"
+                                        value="<?php echo e($blog_post->date); ?>">
+                            </div>
+
+                               <!--div class="form-group">
+                                <label for="time"><?php echo e(__('time')); ?></label>
+             <input type="time" class="form-control" name="time" id="time"
+                                       placeholder="<?php echo e(__('time')); ?>"
+                                        value="<?php echo e($blog_post->time); ?>">
+                            </div -->
+
 
                             <div class="form-group">
                                 <label for="title"><?php echo e(__('Title')); ?></label>

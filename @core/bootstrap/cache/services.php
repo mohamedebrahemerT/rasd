@@ -46,6 +46,7 @@
     42 => 'App\\Providers\\RouteServiceProvider',
     43 => 'Intervention\\Image\\ImageServiceProvider',
     44 => 'App\\Providers\\ValidatorServiceProvider',
+    45 => 'Vedmant\\FeedReader\\FeedReaderServiceProvider',
   ),
   'eager' => 
   array (
@@ -80,6 +81,7 @@
     28 => 'App\\Providers\\RouteServiceProvider',
     29 => 'Intervention\\Image\\ImageServiceProvider',
     30 => 'App\\Providers\\ValidatorServiceProvider',
+    31 => 'Vedmant\\FeedReader\\FeedReaderServiceProvider',
   ),
   'deferred' => 
   array (

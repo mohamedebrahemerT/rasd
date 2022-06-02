@@ -45,7 +45,30 @@
                         <form action="{{route('admin.blog.new')}}" method="post" enctype="multipart/form-data"
                               id="blog_new_form">
                             @csrf
-                            <input type="hidden" name="lang" value="{{$default_lang}}">
+                 <input type="hidden" name="lang" value="{{$default_lang}}">
+
+ 
+
+                           <div class="form-group">
+                                <label for="date"> التاريخ  ( انتبة اذ لم يتم تعيين الخبر بتاريخ قديم سوف يتم احتساب تاريخ اضافة الخبر من الوقت الحالي )</label>
+
+             <input type="date" class="form-control" name="date" id="date"
+                                       placeholder="{{__('date')}}"
+                                        value="{{old('date')}}">
+
+                            </div>
+
+
+                           <!--div class="form-group">
+                                <label for="date"> التاريخ ( انتبة اذ لم يتم تعيين وقت  اضافة الخبر سوف يتم احتساب وقت الخبر بالوقت الحالي ) </label>
+
+             <input type="time" class="form-control" name="time" id="time"
+                                       placeholder="{{__('time')}}"
+                                        value="{{old('time')}}">
+
+                            </div -->
+
+
 
                             <div class="form-group">
                                 <label for="title">{{__('Title')}}</label>

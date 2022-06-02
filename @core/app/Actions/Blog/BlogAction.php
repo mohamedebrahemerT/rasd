@@ -56,6 +56,9 @@ class BlogAction
         $blog->video_url = purify_html($request->video_url);
         $blog->video_duration = purify_html($request->video_duration);
         $blog->created_by = 'admin';
+        $blog->date = $request->date;;
+        $blog->time = $request->time;;
+
 
         $Metas = [
             'meta_title'=> purify_html($request->meta_title),
@@ -125,6 +128,9 @@ class BlogAction
         $blog_update->views = 0;
         $blog_update->video_url =$request->video_url;
         $blog_update->video_duration =$request->video_duration;
+        $blog_update->date =$request->date;
+        $blog_update->time =$request->time;
+      
       
       
 
